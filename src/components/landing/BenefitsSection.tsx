@@ -4,8 +4,8 @@ import { Zap, Bell, LayoutGrid, TrendingUp } from "lucide-react";
 const benefits = [
   { icon: Zap, title: "Responda em segundos", desc: "Templates e IA para atender clientes instantaneamente" },
   { icon: Bell, title: "Nunca esqueça follow-up", desc: "Lembretes automáticos para cada oportunidade" },
-  { icon: LayoutGrid, title: "Mais organização", desc: "Etiquetas, notas e filtros para controlar tudo" },
-  { icon: TrendingUp, title: "Mais vendas", desc: "Converta mais leads com atendimento profissional" },
+  { icon: LayoutGrid, title: "Controle total das conversas", desc: "Etiquetas, notas e filtros para nunca perder o fio" },
+  { icon: TrendingUp, title: "Mais clientes fechados", desc: "Atendimento profissional que converte mais leads" },
 ];
 
 export function BenefitsSection() {
