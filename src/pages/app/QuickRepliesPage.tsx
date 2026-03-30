@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Pencil, Trash2, Plus, Copy, Zap } from "lucide-react";
 
 const replies = [
-  { id: 1, title: "Saudação", shortcut: "/oi", text: "Olá! Tudo bem? Sou [nome] da [empresa]. Como posso te ajudar hoje?" },
-  { id: 2, title: "Envio de orçamento", shortcut: "/orcamento", text: "Segue o orçamento conforme conversamos. Qualquer dúvida, estou por aqui!" },
-  { id: 3, title: "Follow-up", shortcut: "/followup", text: "Oi! Passando pra saber se conseguiu pensar sobre nossa proposta. Posso te ajudar com algo?" },
-  { id: 4, title: "Cobrança leve", shortcut: "/cobranca", text: "Oi! Tudo bem? Notei que o pagamento referente ao [serviço] ainda está em aberto. Posso te ajudar?" },
-  { id: 5, title: "Encerramento", shortcut: "/tchau", text: "Foi um prazer te atender! Se precisar de qualquer coisa, é só chamar. Até mais! 👋" },
-  { id: 6, title: "Agradecimento", shortcut: "/obrigado", text: "Obrigado pelo contato! Qualquer dúvida, estou sempre por aqui. 😊" },
+  { id: 1, title: "Saudação - Primeiro Contato", shortcut: "/oi", text: "Olá [nome]! Tudo bem? Sou da equipe comercial. Vi que você se interessou pelo nosso plano, posso te explicar como funciona rapidamente?" },
+  { id: 2, title: "Envio de Proposta (Link)", shortcut: "/proposta", text: "Excelente, [nome]! Acabei de gerar o link da sua proposta comercial atualizada. Confere todos os detalhes aqui: [link]. Me avisa quando puder dar uma olhada?" },
+  { id: 3, title: "Follow-up (Esfriando)", shortcut: "/follow", text: "Oi [nome]! Tudo bem? Estou passando rapidinho pra saber se conseguiu analisar nossa última conversa. Posso te ajudar a resolver alguma dúvida que tenha ficado?" },
+  { id: 4, title: "Cobrança Amigável", shortcut: "/cobranca", text: "Olá [nome], tudo ótimo? Notei que o documento [doc] ainda consta em aberto no sistema. Se precisar de uma segunda via ou reagendar o vencimento, é só me falar!" },
+  { id: 5, title: "Encerramento e NPS", shortcut: "/tchau", text: "Foi um prazer bater esse papo com você, [nome]! Vou deixar anotado e, qualquer necessidade futura, nossa equipe estará 100% à disposição. Um abraço! 🚀" },
+  { id: 6, title: "Transferência (Financeiro)", shortcut: "/financeiro", text: "Compreendo. Vou transferir seu atendimento para o nosso time financeiro agora mesmo para que eles verifiquem isso mais rápido, ok? Só um minuto." },
 ];
 
 export default function QuickRepliesPage() {
@@ -15,10 +15,10 @@ export default function QuickRepliesPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="font-display text-2xl font-bold">Respostas rápidas</h1>
-          <p className="text-muted-foreground">Templates de mensagens para responder em segundos</p>
+          <h1 className="font-display text-[26px] font-extrabold tracking-tight">Respostas Rápidas</h1>
+          <p className="text-muted-foreground text-[14px]">Templates de mensagens para acelerar seus atendimentos</p>
         </div>
-        <Button variant="gradient" className="rounded-xl">
+        <Button variant="gradient" className="rounded-xl shadow-sm hover:shadow-md transition-shadow font-bold h-10 px-4">
           <Plus className="h-4 w-4 mr-2" /> Nova resposta
         </Button>
       </div>
