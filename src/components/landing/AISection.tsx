@@ -28,7 +28,10 @@ export function AISection() {
               Seu atendente com{" "}
               <span className="gradient-text">inteligência artificial</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-foreground/80 text-lg font-medium max-w-2xl mx-auto">
+              Responda em segundos, mesmo sem saber o que dizer.
+            </p>
+            <p className="text-muted-foreground text-base max-w-2xl mx-auto">
               A IA do Nevix entende o contexto e ajuda você a responder melhor e mais rápido.
             </p>
           </div>

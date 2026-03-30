@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { Zap, Tag, StickyNote, Bell, Brain, FileText } from "lucide-react";
 
 const features = [
-  { icon: Zap, title: "Respostas rápidas", desc: "Templates prontos para responder em segundos" },
-  { icon: Tag, title: "Etiquetas", desc: "Organize clientes por categoria e prioridade" },
-  { icon: StickyNote, title: "Notas internas", desc: "Adicione contexto invisível para sua equipe" },
-  { icon: Bell, title: "Lembretes", desc: "Nunca mais esqueça um follow-up importante" },
-  { icon: Brain, title: "IA que sugere respostas", desc: "Respostas inteligentes com um clique" },
-  { icon: FileText, title: "Resumo automático", desc: "IA resume conversas longas para você" },
+  { icon: Zap, title: "Respostas rápidas", desc: "Responda qualquer cliente em segundos com templates prontos" },
+  { icon: Tag, title: "Etiquetas", desc: "Saiba exatamente quem é cada cliente e o que ele precisa" },
+  { icon: StickyNote, title: "Notas internas", desc: "Compartilhe contexto com sua equipe sem o cliente ver" },
+  { icon: Bell, title: "Lembretes", desc: "Nunca mais perca um follow-up — o Nevix avisa você" },
+  { icon: Brain, title: "IA que sugere respostas", desc: "Responda com qualidade, mesmo quando não sabe o que dizer" },
+  { icon: FileText, title: "Resumo automático", desc: "Entenda qualquer conversa longa em segundos" },
 ];
 
 export function FeaturesSection() {

@@ -12,11 +12,11 @@ export function SolutionSection() {
           className="max-w-3xl mx-auto text-center space-y-6"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold">
-            A solução? O <span className="gradient-text">Nevix</span>.
+            A solução para <span className="gradient-text">não perder mais clientes</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            O Nevix funciona direto no WhatsApp Web com um painel lateral inteligente.
-            Sem trocar de plataforma, sem complicação.
+            O Nevix organiza seu atendimento diretamente no WhatsApp Web, sem complicação.
+            Sem trocar de plataforma, sem instalação complexa.
           </p>
 
           <div className="flex flex-col gap-4 items-start text-left max-w-md mx-auto pt-4">
@@ -24,7 +24,7 @@ export function SolutionSection() {
               "Funciona direto no WhatsApp Web",
               "Painel lateral com tudo que você precisa",
               "IA integrada para respostas inteligentes",
-              "Sem instalação complicada",
+              "Ative em 2 minutos, sem complicação",
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -35,7 +35,7 @@ export function SolutionSection() {
                 className="flex items-center gap-3"
               >
                 <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-foreground">{item}</span>
+                <span className="text-foreground font-medium">{item}</span>
               </motion.div>
             ))}
           </div>
