@@ -1,10 +1,25 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app/AppSidebar";
-import { Outlet } from "react-router-dom";
-import { Search, Plus, Sparkles, Bell } from "lucide-react";
+import { Outlet, useNavigate } from "react-router-dom";
+import { Search, Plus, Sparkles, Bell, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/contexts/AuthContext";
+import { useWorkspace } from "@/contexts/WorkspaceContext";
 
 export default function AppLayout() {
+  const { user, signOut } = useAuth();
+  const { workspace } = useWorkspace();
+  const navigate = useNavigate();
+
+  const initials = user?.user_metadata?.full_name
+    ? user.user_metadata.full_name.split(" ").map((n: string) => n[0]).join("").slice(0, 2).toUpperCase()
+    : user?.email?.[0]?.toUpperCase() || "U";
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate("/login");
+  };
+
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full bg-[#FAFAFA] dark:bg-background/95 selection:bg-primary/20">
@@ -23,6 +38,11 @@ export default function AppLayout() {
               </div>
             </div>
             <div className="flex items-center gap-3">
+              {workspace && (
+                <span className="text-xs text-muted-foreground font-medium hidden lg:block">
+                  {workspace.name}
+                </span>
+              )}
               <Button variant="outline" className="rounded-full hidden sm:flex h-9 px-4 border-primary/20 text-primary hover:bg-primary/5 hover:text-primary hover:border-primary/40 font-semibold text-[13px] transition-all">
                 <Plus className="h-3.5 w-3.5 mr-1.5" /> Nova Conversa
               </Button>
@@ -35,8 +55,17 @@ export default function AppLayout() {
                 <span className="absolute top-2 right-2.5 w-2 h-2 rounded-full bg-pink-500 border border-card"></span>
               </Button>
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center text-primary text-sm font-bold cursor-pointer ring-2 ring-background shadow-sm hover:ring-primary/20 transition-all ml-1">
-                J
+                {initials}
               </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-9 w-9 text-muted-foreground hover:text-destructive rounded-full"
+                onClick={handleSignOut}
+                title="Sair"
+              >
+                <LogOut className="h-4 w-4" />
+              </Button>
             </div>
           </header>
           <main className="flex-1 p-6 xl:p-8 overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-border/50 [&::-webkit-scrollbar-thumb]:rounded-full">
