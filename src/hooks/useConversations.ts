@@ -21,10 +21,14 @@ export function useConversations() {
   });
 
   const createConversation = useMutation({
-    mutationFn: async (conv: { contact_id: string; channel?: string }) => {
+    mutationFn: async (conv: { contact_id: string; channel?: "whatsapp" | "email" | "webchat" | "telegram" | "instagram" }) => {
       const { data, error } = await supabase
         .from("conversations")
-        .insert({ ...conv, workspace_id: workspace!.id })
+        .insert({
+          contact_id: conv.contact_id,
+          channel: conv.channel ?? "whatsapp",
+          workspace_id: workspace!.id,
+        })
         .select()
         .single();
       if (error) throw error;
