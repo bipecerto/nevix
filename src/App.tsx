@@ -3,8 +3,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { AuthProvider } from "@/contexts/AuthContext";
+import { WorkspaceProvider } from "@/contexts/WorkspaceContext";
+import ProtectedRoute from "@/components/ProtectedRoute";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import AuthPage from "./pages/AuthPage.tsx";
+import OnboardingPage from "./pages/OnboardingPage.tsx";
 import AppLayout from "./components/app/AppLayout.tsx";
 import DashboardPage from "./pages/app/DashboardPage.tsx";
 import ConversationsPage from "./pages/app/ConversationsPage.tsx";
@@ -24,21 +29,34 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/app" element={<AppLayout />}>
-            <Route index element={<DashboardPage />} />
-            <Route path="conversas" element={<ConversationsPage />} />
-            <Route path="contatos" element={<ContactsPage />} />
-            <Route path="etiquetas" element={<TagsPage />} />
-            <Route path="respostas" element={<QuickRepliesPage />} />
-            <Route path="lembretes" element={<RemindersPage />} />
-            <Route path="equipe" element={<TeamPage />} />
-            <Route path="relatorios" element={<ReportsPage />} />
-            <Route path="config" element={<SettingsPage />} />
-          </Route>
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AuthProvider>
+          <WorkspaceProvider>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/login" element={<AuthPage />} />
+              <Route path="/onboarding" element={<OnboardingPage />} />
+              <Route
+                path="/app"
+                element={
+                  <ProtectedRoute>
+                    <AppLayout />
+                  </ProtectedRoute>
+                }
+              >
+                <Route index element={<DashboardPage />} />
+                <Route path="conversas" element={<ConversationsPage />} />
+                <Route path="contatos" element={<ContactsPage />} />
+                <Route path="etiquetas" element={<TagsPage />} />
+                <Route path="respostas" element={<QuickRepliesPage />} />
+                <Route path="lembretes" element={<RemindersPage />} />
+                <Route path="equipe" element={<TeamPage />} />
+                <Route path="relatorios" element={<ReportsPage />} />
+                <Route path="config" element={<SettingsPage />} />
+              </Route>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </WorkspaceProvider>
+        </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
