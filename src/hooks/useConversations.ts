@@ -59,11 +59,12 @@ export function useMessages(conversationId: string | null) {
   });
 
   const sendMessage = useMutation({
-    mutationFn: async (msg: { content: string; sender_type: string }) => {
+    mutationFn: async (msg: { content: string; sender_type: "contact" | "agent" | "system" | "ai" }) => {
       const { data, error } = await supabase
         .from("messages")
         .insert({
-          ...msg,
+          content: msg.content,
+          sender_type: msg.sender_type,
           workspace_id: workspace!.id,
           conversation_id: conversationId!,
         })
