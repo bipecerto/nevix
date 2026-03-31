@@ -15,9 +15,9 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
           <a href="#inicio" className="hover:text-foreground transition-colors">Início</a>
-          <a href="#funcionalidades" className="hover:text-foreground transition-colors">Como funciona</a>
-          <a href="#planos" className="hover:text-foreground transition-colors">O que faz</a>
+          <a href="#como-funciona" className="hover:text-foreground transition-colors">Como funciona</a>
           <a href="#beneficios" className="hover:text-foreground transition-colors">Benefícios</a>
+          <a href="#o-que-faz" className="hover:text-foreground transition-colors">O que faz</a>
           <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
         </div>
 

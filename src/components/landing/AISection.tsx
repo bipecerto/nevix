@@ -2,25 +2,24 @@ import { motion } from "framer-motion";
 import {
   MessageSquare,
   Route,
-  Brain,
   Database,
-  ArrowRightLeft,
   Clock,
   Workflow,
+  Users,
 } from "lucide-react";
 
 const capabilities = [
-  { icon: MessageSquare, text: "Responder dúvidas automaticamente" },
-  { icon: Route, text: "Conduz o cliente na conversa" },
-  { icon: Brain, text: "Identifica intencao e necessidade" },
-  { icon: Database, text: "Coleta informacoes importantes" },
-  { icon: ArrowRightLeft, text: "Encaminha quando necessario" },
+  { icon: MessageSquare, text: "Responde dúvidas automaticamente" },
+  { icon: Route, text: "Conduz o cliente durante a conversa" },
+  { icon: Database, text: "Organiza dados importantes" },
+  { icon: Users, text: "Ajuda a qualificar contatos" },
   { icon: Clock, text: "Funciona 24 horas por dia" },
+  { icon: Workflow, text: "Mantém consistência no atendimento" },
 ];
 
 export function AISection() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden">
+    <section id="o-que-faz" className="py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 gradient-hero" />
       <div className="container relative z-10">
         <motion.div
@@ -32,16 +31,17 @@ export function AISection() {
           <div className="text-center space-y-4 mb-12">
             <div className="inline-flex items-center gap-2 rounded-full gradient-bg px-4 py-1.5 text-sm font-medium text-primary-foreground">
               <Workflow className="h-4 w-4" />
-              Sistema inteligente avancado
+              Atendimento inteligente avançado
             </div>
             <h2 className="font-display text-3xl md:text-5xl font-bold">
-              Nao e um chatbot. <span className="gradient-text">E uma agente inteligente.</span>
+              Não é só resposta automática.{" "}
+              <span className="gradient-text">É atendimento inteligente.</span>
             </h2>
             <p className="text-foreground/80 text-lg font-medium max-w-2xl mx-auto">
-              Enquanto solucoes comuns apenas enviam respostas, o Nevix conduz o atendimento. Ele entende, responde e direciona cada cliente ate o proximo passo.
+              O Nevix vai além de respostas prontas. Ele ajuda a conduzir a conversa, organizar o processo e acelerar o atendimento do seu negócio.
             </p>
             <p className="text-muted-foreground text-base max-w-2xl mx-auto">
-              Mais clientes, menos esforco.
+              Transforme mensagens em atendimento real.
             </p>
           </div>
 

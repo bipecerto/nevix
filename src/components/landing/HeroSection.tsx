@@ -26,10 +26,10 @@ function WhatsAppMockup() {
           {/* Chat list */}
           <div className="w-1/3 border-r border-border bg-card p-3 space-y-2 hidden sm:block">
             {[
-              { name: "Maria Silva", msg: "Olá, gostaria de saber...", time: "10:32", unread: true },
+              { name: "Maria Silva", msg: "Oi, queria mais informações", time: "10:32", unread: true },
               { name: "João Santos", msg: "Pode me enviar o orçamento?", time: "09:15", unread: true },
               { name: "Ana Costa", msg: "Obrigada pelo atendimento!", time: "Ontem", unread: false },
-              { name: "Pedro Lima", msg: "Quando chega o pedido?", time: "Ontem", unread: false },
+              { name: "Pedro Lima", msg: "Quando posso começar?", time: "Ontem", unread: false },
             ].map((c, i) => (
               <div key={i} className={`flex items-center gap-2.5 p-2.5 rounded-xl text-xs ${i === 0 ? "bg-accent" : "hover:bg-muted/50"} transition-colors`}>
                 <div className="w-9 h-9 rounded-full bg-muted flex items-center justify-center flex-shrink-0 text-muted-foreground font-semibold text-[10px]">
@@ -55,13 +55,16 @@ function WhatsAppMockup() {
             </div>
             <div className="flex-1 p-4 space-y-2 text-xs">
               <div className="bg-card border border-border rounded-xl px-3 py-2 max-w-[70%] text-foreground">
-                Oi, pode me ajudar?
+                Oi, queria saber mais informações
               </div>
               <div className="bg-primary/10 rounded-xl px-3 py-2 max-w-[70%] ml-auto text-foreground">
-                Claro! Me conta o que você precisa que eu te ajudo agora 👇
+                Olá! Posso te ajudar agora 👋 Me diz o que você procura para eu te orientar da melhor forma.
+              </div>
+              <div className="bg-card border border-border rounded-xl px-3 py-2 max-w-[70%] text-foreground">
+                Quero saber sobre o atendimento automatico
               </div>
               <div className="bg-primary/10 rounded-xl px-3 py-2 max-w-[70%] ml-auto text-foreground">
-                Perfeito 👍 ja entendi. Vou te passar as melhores opcoes.
+                Perfeito. Já entendi o que você precisa e vou te passar as melhores opções. ✅
               </div>
             </div>
           </div>
@@ -89,16 +92,16 @@ function WhatsAppMockup() {
             {/* AI button */}
             <button className="w-full flex items-center gap-2 px-3 py-2 rounded-lg gradient-bg text-primary-foreground text-[10px] font-semibold">
               <Workflow className="h-3.5 w-3.5" />
-              Atendimento sem pausa
+              Atendimento ativo 24/7
             </button>
 
             {/* Reminder */}
             <div className="space-y-1.5">
               <div className="flex items-center gap-1.5 text-[10px] font-medium text-muted-foreground">
-                <Bell className="h-3 w-3" /> Lembrete
+                <Bell className="h-3 w-3" /> Status
               </div>
               <div className="bg-accent rounded-lg p-2 text-[10px] text-accent-foreground">
-                Atendimento inteligente 24/7
+                Agente respondendo automaticamente
               </div>
             </div>
 
@@ -108,7 +111,7 @@ function WhatsAppMockup() {
                 <MessageSquare className="h-3 w-3" /> Nota interna
               </div>
               <div className="bg-muted rounded-lg p-2 text-[10px] text-muted-foreground">
-                Respostas instantaneas
+                Contato qualificado — seguir fluxo
               </div>
             </div>
           </div>
@@ -123,7 +126,7 @@ function WhatsAppMockup() {
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden gradient-hero min-h-[90vh] flex items-center">
+    <section id="inicio" className="relative overflow-hidden gradient-hero min-h-[90vh] flex items-center">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-secondary/5 blur-3xl" />
@@ -138,7 +141,7 @@ export function HeroSection() {
         >
           <div className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-sm font-medium text-accent-foreground">
             <Workflow className="h-4 w-4" />
-            Atendimento inteligente 24/7
+            Agente de atendimento inteligente
           </div>
 
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
@@ -146,23 +149,23 @@ export function HeroSection() {
           </h1>
 
           <p className="text-lg md:text-xl text-foreground/80 font-medium max-w-2xl mx-auto leading-relaxed">
-            O Nevix e uma agente inteligente que responde clientes, organiza contatos e conduz o atendimento automaticamente, sem depender de equipe.
+            O Nevix é uma agente inteligente que responde clientes, organiza contatos e conduz o atendimento automaticamente no WhatsApp.
           </p>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Atendimento inteligente direto no WhatsApp
+            Atendimento mais rápido, organizado e sem esforço manual
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
-            <Button variant="outline" size="lg" className="text-base px-9 py-7 rounded-xl font-bold" asChild>
+            <Button variant="gradient" size="lg" className="text-base px-9 py-7 rounded-xl font-bold shadow-glow" asChild>
               <Link to="/app">
-                Ver como funciona
+                Ver demonstração
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button variant="gradient" size="lg" className="text-base px-9 py-7 rounded-xl font-bold shadow-glow" asChild>
+            <Button variant="outline" size="lg" className="text-base px-9 py-7 rounded-xl font-bold" asChild>
               <Link to="/app">
-                Testar demonstracao
+                Falar com especialista
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

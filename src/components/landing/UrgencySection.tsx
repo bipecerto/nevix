@@ -13,10 +13,10 @@ export function UrgencySection() {
         >
           <ShieldCheck className="h-8 w-8 text-primary mx-auto" />
           <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
-            Atendimento no automatico, com <span className="gradient-text">mais resultado</span>.
+            Seu WhatsApp mais organizado, com <span className="gradient-text">atendimento contínuo</span>.
           </h3>
           <p className="text-muted-foreground">
-            Respostas instantaneas, conversas organizadas e mais clientes atendidos todos os dias.
+            Menos esforço manual, mais eficiência — transforme mensagens em atendimento real todos os dias.
           </p>
         </motion.div>
       </div>

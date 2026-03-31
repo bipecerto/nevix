@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { Check, Workflow } from "lucide-react";
 
 const capabilities = [
-  "Responde duvidas automaticamente",
-  "Conduz o cliente na conversa",
-  "Identifica intencao e necessidade",
-  "Coleta informacoes importantes",
-  "Encaminha quando necessario",
-  "Funciona 24 horas por dia",
-  "Seu WhatsApp no automatico",
-  "Mais clientes, menos esforco",
+  "Atendimento automatizado no WhatsApp",
+  "Organização de contatos e leads",
+  "Histórico completo de conversas",
+  "Fluxo de atendimento contínuo",
+  "Centralização das mensagens",
+  "Etiquetas e qualificação de contatos",
+  "Respostas rápidas e personalizadas",
+  "Estrutura pronta para escalar",
 ];
 
 export function PricingSection() {
@@ -23,10 +23,10 @@ export function PricingSection() {
           className="text-center space-y-4 mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold">
-            Tudo que seu atendimento precisa, em um unico agente
+            Tudo que seu atendimento precisa em um só lugar
           </h2>
           <p className="text-muted-foreground text-lg">
-            Atendimento inteligente 24/7 com respostas instantaneas e conversas sem pausa.
+            Seu WhatsApp mais organizado — com respostas rápidas e atendimento contínuo.
           </p>
         </motion.div>
 
@@ -49,10 +49,10 @@ export function PricingSection() {
                   </div>
                   <div>
                     <h3 className="font-display font-bold text-xl">
-                      {idx === 0 ? "Capacidades da agente" : "Atendimento sem pausa"}
+                      {idx === 0 ? "Atendimento inteligente" : "Operação organizada"}
                     </h3>
                     <p className="text-sm text-muted-foreground mt-1">
-                      {idx === 0 ? "Sistema inteligente avancado" : "Seu WhatsApp no automatico"}
+                      {idx === 0 ? "Agente ativa 24h por dia" : "Seu WhatsApp no automático"}
                     </p>
                   </div>
                 </div>
@@ -72,3 +72,4 @@ export function PricingSection() {
     </section>
   );
 }
+

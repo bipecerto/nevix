@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import { Stethoscope, Building2, ShoppingBag, Wrench, Headset } from "lucide-react";
+import { Stethoscope, Building2, ShoppingBag, Wrench, Headset, Briefcase } from "lucide-react";
 
-const problems = [
-  { icon: Stethoscope, text: "Clinicas", desc: "Atendimento rapido para novos e antigos clientes." },
-  { icon: ShoppingBag, text: "Lojas", desc: "Respostas instantaneas para vendas e pos-venda." },
-  { icon: Building2, text: "Imobiliarias", desc: "Conversa inteligente para acelerar oportunidades." },
-  { icon: Wrench, text: "Servicos", desc: "Atendimento organizado para pedidos e orcamentos." },
-  { icon: Headset, text: "Atendimento e suporte", desc: "Conversas sem pausa, com padrao e velocidade." },
+const segments = [
+  { icon: Stethoscope, text: "Clínicas", desc: "Atendimento rápido, agendamentos organizados e menos ligações perdidas." },
+  { icon: ShoppingBag, text: "Lojas", desc: "Respostas instantâneas para vendas, dúvidas e pós-venda." },
+  { icon: Building2, text: "Imobiliárias", desc: "Conversa inteligente para qualificar leads e acelerar oportunidades." },
+  { icon: Briefcase, text: "Escritórios", desc: "Atendimento padronizado para clientes e parceiros." },
+  { icon: Wrench, text: "Empresas de serviços", desc: "Orçamentos, pedidos e suporte organizados em um único lugar." },
+  { icon: Headset, text: "Times de suporte", desc: "Conversas sem pausa, com padrão e velocidade em escala." },
 ];
 
 export function ProblemSection() {
@@ -20,15 +21,15 @@ export function ProblemSection() {
           className="text-center space-y-4 mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold">
-            Ideal para negocios que recebem mensagens todos os dias
+            Ideal para negócios que recebem mensagens todos os dias
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Se o seu WhatsApp nao para, o Nevix transforma isso em um processo automatico.
+            Se sua operação depende de WhatsApp e atendimento rápido, o Nevix ajuda a transformar volume em organização.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {problems.map((item, i) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {segments.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, x: -20 }}

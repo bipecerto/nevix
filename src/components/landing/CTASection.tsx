@@ -15,10 +15,10 @@ export function CTASection() {
           className="max-w-2xl mx-auto text-center space-y-6"
         >
           <h2 className="font-display text-3xl md:text-5xl font-extrabold">
-            Deixe seu atendimento no automatico
+            Deixe seu atendimento no automático com o Nevix
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Ative o Nevix e tenha uma agente inteligente trabalhando para voce todos os dias.
+            Tenha uma agente inteligente trabalhando todos os dias para responder clientes, organizar contatos e acelerar sua operação.
           </p>
           <div className="pt-4">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -29,11 +29,11 @@ export function CTASection() {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" className="text-base px-10 py-7 rounded-xl font-bold" asChild>
-                <Link to="/app">Comecar agora</Link>
+                <Link to="/app">Solicitar apresentação</Link>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
-              Atendimento inteligente 24/7 • Respostas instantaneas • Atendimento sem pausa
+              Atendimento inteligente 24/7 • Respostas rápidas • Atendimento contínuo
             </p>
           </div>
         </motion.div>
@@ -41,3 +41,4 @@ export function CTASection() {
     </section>
   );
 }
+

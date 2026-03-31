@@ -12,18 +12,18 @@ export function SolutionSection() {
           className="max-w-3xl mx-auto text-center space-y-6"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold">
-            Uma agente que trabalha enquanto voce foca no que importa
+            Uma agente que trabalha pelo seu negócio
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            O Nevix assume o atendimento do seu negocio, respondendo mensagens, entendendo o cliente e conduzindo cada conversa de forma automatica.
+            O Nevix ajuda empresas a automatizar o atendimento, responder mais rápido e manter tudo organizado em um só lugar.
           </p>
 
           <div className="flex flex-col gap-4 items-start text-left max-w-md mx-auto pt-4">
             {[
-              "Responde clientes em tempo real",
-              "Conduz conversas automaticamente",
-              "Organiza contatos sem esforco",
-              "Mantem padrao no atendimento",
+              "Responde clientes automaticamente",
+              "Organiza contatos e oportunidades",
+              "Mantém o fluxo de atendimento ativo",
+              "Centraliza as conversas da operação",
             ].map((item, i) => (
               <motion.div
                 key={i}

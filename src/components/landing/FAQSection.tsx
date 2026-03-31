@@ -7,15 +7,31 @@ import {
 import { motion } from "framer-motion";
 
 const faqs = [
-  { q: "O Nevix e um chatbot?", a: "Nao. E uma agente inteligente que conduz o atendimento de forma automatica." },
-  { q: "Funciona no WhatsApp?", a: "Sim, o Nevix atua diretamente nas conversas com clientes." },
-  { q: "Preciso configurar algo complexo?", a: "Nao. O sistema ja vem pronto para operar." },
-  { q: "Serve para qualquer negocio?", a: "Sim, especialmente para quem recebe muitas mensagens." },
+  {
+    q: "O Nevix é um chatbot?",
+    a: "Não. Ele é uma agente inteligente de atendimento criada para conduzir conversas e organizar a operação, não apenas enviar respostas automáticas.",
+  },
+  {
+    q: "Funciona no WhatsApp?",
+    a: "Sim. O Nevix foi pensado para negócios que atendem clientes pelo WhatsApp e precisam de velocidade e organização.",
+  },
+  {
+    q: "Serve para qualquer empresa?",
+    a: "Principalmente para empresas que recebem muitas mensagens e precisam ganhar velocidade, organização e escala no atendimento.",
+  },
+  {
+    q: "Preciso de equipe técnica para usar?",
+    a: "Não. A proposta do Nevix é ser simples, prática e fácil de operar, sem necessidade de configurações complexas.",
+  },
+  {
+    q: "O Nevix ajuda só a responder mensagens?",
+    a: "Não. Ele também ajuda a organizar contatos, manter o fluxo ativo, qualificar leads e estruturar o atendimento completo do seu negócio.",
+  },
 ];
 
 export function FAQSection() {
   return (
-    <section className="py-20 md:py-28">
+    <section id="faq" className="py-20 md:py-28">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
