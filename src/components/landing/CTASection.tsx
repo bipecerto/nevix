@@ -15,20 +15,25 @@ export function CTASection() {
           className="max-w-2xl mx-auto text-center space-y-6"
         >
           <h2 className="font-display text-3xl md:text-5xl font-extrabold">
-            Pare de perder clientes <span className="gradient-text">hoje</span>
+            Deixe seu atendimento no automático com o Nevix
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Comece agora e veja a diferença no seu atendimento em minutos.
+            Tenha uma agente inteligente trabalhando todos os dias para responder clientes, organizar contatos e acelerar sua operação.
           </p>
           <div className="pt-4">
-            <Button variant="gradient" size="lg" className="text-base px-10 py-7 rounded-xl font-bold shadow-glow" asChild>
-              <Link to="/app">
-                Testar grátis por 7 dias
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Button variant="gradient" size="lg" className="text-base px-10 py-7 rounded-xl font-bold shadow-glow" asChild>
+                <Link to="/app">
+                  Quero ver funcionando
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="text-base px-10 py-7 rounded-xl font-bold" asChild>
+                <Link to="/app">Solicitar apresentação</Link>
+              </Button>
+            </div>
             <p className="text-sm text-muted-foreground mt-4">
-              Sem cartão • Cancele quando quiser
+              Atendimento inteligente 24/7 • Respostas rápidas • Atendimento contínuo
             </p>
           </div>
         </motion.div>
@@ -36,3 +41,4 @@ export function CTASection() {
     </section>
   );
 }
+

@@ -10,6 +10,7 @@ import {
   Contact,
   BarChart3,
   Crown,
+  Bot
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -32,7 +33,7 @@ const items = [
   { title: "Etiquetas", url: "/app/etiquetas", icon: Tag },
   { title: "Lembretes", url: "/app/lembretes", icon: Bell },
   { title: "Respostas rápidas", url: "/app/respostas", icon: Zap },
-  { title: "Equipe", url: "/app/equipe", icon: Users },
+  { title: "Agentes", url: "/app/equipe", icon: Bot },
   { title: "Relatórios", url: "/app/relatorios", icon: BarChart3 },
   { title: "Configurações", url: "/app/config", icon: Settings },
 ];

@@ -1,16 +1,25 @@
 import { motion } from "framer-motion";
-import { Bot, MessageSquare, Palette, FileSearch, Lightbulb } from "lucide-react";
+import {
+  MessageSquare,
+  Route,
+  Database,
+  Clock,
+  Workflow,
+  Users,
+} from "lucide-react";
 
 const capabilities = [
-  { icon: MessageSquare, text: "Sugere respostas contextuais" },
-  { icon: Palette, text: "Ajusta o tom da mensagem" },
-  { icon: FileSearch, text: "Resume conversas longas" },
-  { icon: Lightbulb, text: "Recomenda próximas ações" },
+  { icon: MessageSquare, text: "Responde dúvidas automaticamente" },
+  { icon: Route, text: "Conduz o cliente durante a conversa" },
+  { icon: Database, text: "Organiza dados importantes" },
+  { icon: Users, text: "Ajuda a qualificar contatos" },
+  { icon: Clock, text: "Funciona 24 horas por dia" },
+  { icon: Workflow, text: "Mantém consistência no atendimento" },
 ];
 
 export function AISection() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden">
+    <section id="o-que-faz" className="py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 gradient-hero" />
       <div className="container relative z-10">
         <motion.div
@@ -21,18 +30,18 @@ export function AISection() {
         >
           <div className="text-center space-y-4 mb-12">
             <div className="inline-flex items-center gap-2 rounded-full gradient-bg px-4 py-1.5 text-sm font-medium text-primary-foreground">
-              <Bot className="h-4 w-4" />
-              Inteligência Artificial
+              <Workflow className="h-4 w-4" />
+              Atendimento inteligente avançado
             </div>
             <h2 className="font-display text-3xl md:text-5xl font-bold">
-              Seu atendente com{" "}
-              <span className="gradient-text">inteligência artificial</span>
+              Não é só resposta automática.{" "}
+              <span className="gradient-text">É atendimento inteligente.</span>
             </h2>
             <p className="text-foreground/80 text-lg font-medium max-w-2xl mx-auto">
-              Responda em segundos, mesmo sem saber o que dizer.
+              O Nevix vai além de respostas prontas. Ele ajuda a conduzir a conversa, organizar o processo e acelerar o atendimento do seu negócio.
             </p>
             <p className="text-muted-foreground text-base max-w-2xl mx-auto">
-              A IA do Nevix entende o contexto e ajuda você a responder melhor e mais rápido.
+              Transforme mensagens em atendimento real.
             </p>
           </div>
 

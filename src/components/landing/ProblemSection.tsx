@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
-import { UserX, Clock, FolderX, TrendingDown } from "lucide-react";
+import { Stethoscope, Building2, ShoppingBag, Wrench, Headset, Briefcase } from "lucide-react";
 
-const problems = [
-  { icon: UserX, text: "Clientes esquecidos = dinheiro perdido", desc: "Cada lead sem resposta é uma venda que vai pro concorrente." },
-  { icon: Clock, text: "Responder tarde = cliente compra do concorrente", desc: "Quem demora para atender, perde a venda na hora." },
-  { icon: FolderX, text: "Conversas desorganizadas = menos vendas", desc: "Sem controle, você não sabe quem precisa de atenção." },
-  { icon: TrendingDown, text: "Sem follow-up = oportunidades perdidas", desc: "A maioria das vendas acontece no segundo ou terceiro contato." },
+const segments = [
+  { icon: Stethoscope, text: "Clínicas", desc: "Atendimento rápido, agendamentos organizados e menos ligações perdidas." },
+  { icon: ShoppingBag, text: "Lojas", desc: "Respostas instantâneas para vendas, dúvidas e pós-venda." },
+  { icon: Building2, text: "Imobiliárias", desc: "Conversa inteligente para qualificar leads e acelerar oportunidades." },
+  { icon: Briefcase, text: "Escritórios", desc: "Atendimento padronizado para clientes e parceiros." },
+  { icon: Wrench, text: "Empresas de serviços", desc: "Orçamentos, pedidos e suporte organizados em um único lugar." },
+  { icon: Headset, text: "Times de suporte", desc: "Conversas sem pausa, com padrão e velocidade em escala." },
 ];
 
 export function ProblemSection() {
@@ -19,25 +21,25 @@ export function ProblemSection() {
           className="text-center space-y-4 mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold">
-            Você está <span className="gradient-text">perdendo vendas</span> sem perceber
+            Ideal para negócios que recebem mensagens todos os dias
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Se você usa o WhatsApp para vender, esses problemas são seus também.
+            Se sua operação depende de WhatsApp e atendimento rápido, o Nevix ajuda a transformar volume em organização.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {problems.map((item, i) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {segments.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex items-start gap-4 p-6 rounded-2xl bg-destructive/5 border border-destructive/10"
+              className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border hover:shadow-medium hover:border-primary/20 transition-all duration-300"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center">
-                <item.icon className="h-6 w-6 text-destructive" />
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent flex items-center justify-center">
+                <item.icon className="h-6 w-6 text-accent-foreground" />
               </div>
               <div>
                 <span className="font-display font-bold text-foreground block">{item.text}</span>

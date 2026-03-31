@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { AlertCircle } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 export function UrgencySection() {
   return (
@@ -11,12 +11,12 @@ export function UrgencySection() {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto text-center space-y-4 p-8 rounded-2xl border border-primary/20 bg-accent"
         >
-          <AlertCircle className="h-8 w-8 text-primary mx-auto" />
+          <ShieldCheck className="h-8 w-8 text-primary mx-auto" />
           <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
-            Você tem clientes esperando resposta <span className="gradient-text">agora</span>.
+            Seu WhatsApp mais organizado, com <span className="gradient-text">atendimento contínuo</span>.
           </h3>
           <p className="text-muted-foreground">
-            Cada minuto sem responder é uma venda que pode ir embora. Não espere mais.
+            Menos esforço manual, mais eficiência — transforme mensagens em atendimento real todos os dias.
           </p>
         </motion.div>
       </div>
