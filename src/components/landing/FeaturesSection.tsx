@@ -1,13 +1,11 @@
 import { motion } from "framer-motion";
-import { Zap, Tag, StickyNote, Bell, Brain, FileText } from "lucide-react";
+import { MessageSquare, Send, Database, Workflow } from "lucide-react";
 
 const features = [
-  { icon: Zap, title: "Respostas rápidas", desc: "Responda qualquer cliente em segundos com templates prontos" },
-  { icon: Tag, title: "Etiquetas", desc: "Saiba exatamente quem é cada cliente e o que ele precisa" },
-  { icon: StickyNote, title: "Notas internas", desc: "Compartilhe contexto com sua equipe sem o cliente ver" },
-  { icon: Bell, title: "Lembretes", desc: "Nunca mais perca um follow-up — o Nevix avisa você" },
-  { icon: Brain, title: "IA que sugere respostas", desc: "Responda com qualidade, mesmo quando não sabe o que dizer" },
-  { icon: FileText, title: "Resumo automático", desc: "Entenda qualquer conversa longa em segundos" },
+  { icon: MessageSquare, title: "Entende o cliente", desc: "Interpreta mensagens e identifica o que a pessoa precisa." },
+  { icon: Send, title: "Responde automaticamente", desc: "Conduz a conversa sem depender de resposta manual." },
+  { icon: Database, title: "Organiza tudo", desc: "Estrutura contatos, informacoes e oportunidades." },
+  { icon: Workflow, title: "Mantem o fluxo", desc: "Garante que nenhum atendimento fique parado." },
 ];
 
 export function FeaturesSection() {
@@ -21,10 +19,10 @@ export function FeaturesSection() {
           className="text-center space-y-4 mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold">
-            Tudo que você precisa, <span className="gradient-text">em um lugar</span>
+            Como o Nevix atua no seu atendimento
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Ferramentas poderosas para transformar seu atendimento.
+            Seu WhatsApp no automatico, com respostas instantaneas e atendimento sem pausa.
           </p>
         </motion.div>
 

@@ -1,11 +1,21 @@
 import { motion } from "framer-motion";
-import { Bot, MessageSquare, Palette, FileSearch, Lightbulb } from "lucide-react";
+import {
+  MessageSquare,
+  Route,
+  Brain,
+  Database,
+  ArrowRightLeft,
+  Clock,
+  Workflow,
+} from "lucide-react";
 
 const capabilities = [
-  { icon: MessageSquare, text: "Sugere respostas contextuais" },
-  { icon: Palette, text: "Ajusta o tom da mensagem" },
-  { icon: FileSearch, text: "Resume conversas longas" },
-  { icon: Lightbulb, text: "Recomenda próximas ações" },
+  { icon: MessageSquare, text: "Responder dúvidas automaticamente" },
+  { icon: Route, text: "Conduz o cliente na conversa" },
+  { icon: Brain, text: "Identifica intencao e necessidade" },
+  { icon: Database, text: "Coleta informacoes importantes" },
+  { icon: ArrowRightLeft, text: "Encaminha quando necessario" },
+  { icon: Clock, text: "Funciona 24 horas por dia" },
 ];
 
 export function AISection() {
@@ -21,18 +31,17 @@ export function AISection() {
         >
           <div className="text-center space-y-4 mb-12">
             <div className="inline-flex items-center gap-2 rounded-full gradient-bg px-4 py-1.5 text-sm font-medium text-primary-foreground">
-              <Bot className="h-4 w-4" />
-              Inteligência Artificial
+              <Workflow className="h-4 w-4" />
+              Sistema inteligente avancado
             </div>
             <h2 className="font-display text-3xl md:text-5xl font-bold">
-              Seu atendente com{" "}
-              <span className="gradient-text">inteligência artificial</span>
+              Nao e um chatbot. <span className="gradient-text">E uma agente inteligente.</span>
             </h2>
             <p className="text-foreground/80 text-lg font-medium max-w-2xl mx-auto">
-              Responda em segundos, mesmo sem saber o que dizer.
+              Enquanto solucoes comuns apenas enviam respostas, o Nevix conduz o atendimento. Ele entende, responde e direciona cada cliente ate o proximo passo.
             </p>
             <p className="text-muted-foreground text-base max-w-2xl mx-auto">
-              A IA do Nevix entende o contexto e ajuda você a responder melhor e mais rápido.
+              Mais clientes, menos esforco.
             </p>
           </div>
 

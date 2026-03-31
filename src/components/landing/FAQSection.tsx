@@ -7,10 +7,10 @@ import {
 import { motion } from "framer-motion";
 
 const faqs = [
-  { q: "Funciona no celular?", a: "O Nevix é otimizado para o WhatsApp Web no desktop, mas você pode acessar o dashboard pelo celular normalmente." },
-  { q: "Precisa instalar alguma coisa?", a: "Não! O Nevix funciona como uma extensão no seu navegador. Basta ativar e começar a usar." },
-  { q: "Posso cancelar a qualquer momento?", a: "Sim, sem burocracia. Cancele quando quiser, sem multas ou taxas." },
-  { q: "Tem teste grátis?", a: "Sim! Você pode testar todas as funcionalidades por 7 dias sem precisar de cartão de crédito." },
+  { q: "O Nevix e um chatbot?", a: "Nao. E uma agente inteligente que conduz o atendimento de forma automatica." },
+  { q: "Funciona no WhatsApp?", a: "Sim, o Nevix atua diretamente nas conversas com clientes." },
+  { q: "Preciso configurar algo complexo?", a: "Nao. O sistema ja vem pronto para operar." },
+  { q: "Serve para qualquer negocio?", a: "Sim, especialmente para quem recebe muitas mensagens." },
 ];
 
 export function FAQSection() {

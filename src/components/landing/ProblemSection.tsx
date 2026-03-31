@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { UserX, Clock, FolderX, TrendingDown } from "lucide-react";
+import { Stethoscope, Building2, ShoppingBag, Wrench, Headset } from "lucide-react";
 
 const problems = [
-  { icon: UserX, text: "Clientes esquecidos = dinheiro perdido", desc: "Cada lead sem resposta é uma venda que vai pro concorrente." },
-  { icon: Clock, text: "Responder tarde = cliente compra do concorrente", desc: "Quem demora para atender, perde a venda na hora." },
-  { icon: FolderX, text: "Conversas desorganizadas = menos vendas", desc: "Sem controle, você não sabe quem precisa de atenção." },
-  { icon: TrendingDown, text: "Sem follow-up = oportunidades perdidas", desc: "A maioria das vendas acontece no segundo ou terceiro contato." },
+  { icon: Stethoscope, text: "Clinicas", desc: "Atendimento rapido para novos e antigos clientes." },
+  { icon: ShoppingBag, text: "Lojas", desc: "Respostas instantaneas para vendas e pos-venda." },
+  { icon: Building2, text: "Imobiliarias", desc: "Conversa inteligente para acelerar oportunidades." },
+  { icon: Wrench, text: "Servicos", desc: "Atendimento organizado para pedidos e orcamentos." },
+  { icon: Headset, text: "Atendimento e suporte", desc: "Conversas sem pausa, com padrao e velocidade." },
 ];
 
 export function ProblemSection() {
@@ -19,14 +20,14 @@ export function ProblemSection() {
           className="text-center space-y-4 mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold">
-            Você está <span className="gradient-text">perdendo vendas</span> sem perceber
+            Ideal para negocios que recebem mensagens todos os dias
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Se você usa o WhatsApp para vender, esses problemas são seus também.
+            Se o seu WhatsApp nao para, o Nevix transforma isso em um processo automatico.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {problems.map((item, i) => (
             <motion.div
               key={i}
@@ -34,10 +35,10 @@ export function ProblemSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex items-start gap-4 p-6 rounded-2xl bg-destructive/5 border border-destructive/10"
+              className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border hover:shadow-medium hover:border-primary/20 transition-all duration-300"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center">
-                <item.icon className="h-6 w-6 text-destructive" />
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent flex items-center justify-center">
+                <item.icon className="h-6 w-6 text-accent-foreground" />
               </div>
               <div>
                 <span className="font-display font-bold text-foreground block">{item.text}</span>

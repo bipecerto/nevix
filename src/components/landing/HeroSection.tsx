@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Tag, Bot, Bell, MessageSquare } from "lucide-react";
+import { ArrowRight, Sparkles, Tag, Bell, MessageSquare, Workflow } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function WhatsAppMockup() {
@@ -55,10 +55,13 @@ function WhatsAppMockup() {
             </div>
             <div className="flex-1 p-4 space-y-2 text-xs">
               <div className="bg-card border border-border rounded-xl px-3 py-2 max-w-[70%] text-foreground">
-                Olá, gostaria de saber o preço do plano premium
+                Oi, pode me ajudar?
               </div>
               <div className="bg-primary/10 rounded-xl px-3 py-2 max-w-[70%] ml-auto text-foreground">
-                Olá Maria! O plano Premium custa R$297/ano 😊
+                Claro! Me conta o que você precisa que eu te ajudo agora 👇
+              </div>
+              <div className="bg-primary/10 rounded-xl px-3 py-2 max-w-[70%] ml-auto text-foreground">
+                Perfeito 👍 ja entendi. Vou te passar as melhores opcoes.
               </div>
             </div>
           </div>
@@ -78,15 +81,15 @@ function WhatsAppMockup() {
                 <Tag className="h-3 w-3" /> Etiquetas
               </div>
               <div className="flex flex-wrap gap-1">
-                <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-medium">Lead quente</span>
-                <span className="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary text-[10px] font-medium">Premium</span>
+                <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-medium">Lead</span>
+                <span className="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary text-[10px] font-medium">WhatsApp</span>
               </div>
             </div>
 
             {/* AI button */}
             <button className="w-full flex items-center gap-2 px-3 py-2 rounded-lg gradient-bg text-primary-foreground text-[10px] font-semibold">
-              <Bot className="h-3.5 w-3.5" />
-              Sugerir resposta com IA
+              <Workflow className="h-3.5 w-3.5" />
+              Atendimento sem pausa
             </button>
 
             {/* Reminder */}
@@ -95,7 +98,7 @@ function WhatsAppMockup() {
                 <Bell className="h-3 w-3" /> Lembrete
               </div>
               <div className="bg-accent rounded-lg p-2 text-[10px] text-accent-foreground">
-                Follow-up amanhã às 10h
+                Atendimento inteligente 24/7
               </div>
             </div>
 
@@ -105,7 +108,7 @@ function WhatsAppMockup() {
                 <MessageSquare className="h-3 w-3" /> Nota interna
               </div>
               <div className="bg-muted rounded-lg p-2 text-[10px] text-muted-foreground">
-                Interessada no plano anual
+                Respostas instantaneas
               </div>
             </div>
           </div>
@@ -134,34 +137,35 @@ export function HeroSection() {
           className="max-w-3xl mx-auto text-center space-y-6"
         >
           <div className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-sm font-medium text-accent-foreground">
-            <Sparkles className="h-4 w-4" />
-            Potencializado por IA
+            <Workflow className="h-4 w-4" />
+            Atendimento inteligente 24/7
           </div>
 
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
-            Transforme seu WhatsApp em uma{" "}
-            <span className="gradient-text">central de atendimento</span>{" "}
-            com IA
+            Seu atendimento funcionando sozinho, todos os dias
           </h1>
 
           <p className="text-lg md:text-xl text-foreground/80 font-medium max-w-2xl mx-auto leading-relaxed">
-            Você pode estar perdendo clientes no WhatsApp agora sem perceber.
+            O Nevix e uma agente inteligente que responde clientes, organiza contatos e conduz o atendimento automaticamente, sem depender de equipe.
           </p>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Clientes esquecidos = vendas perdidas. O Nevix resolve isso em minutos.
+            Atendimento inteligente direto no WhatsApp
           </p>
 
-          <div className="flex flex-col items-center gap-3 pt-4">
-            <Button variant="gradient" size="lg" className="text-base px-10 py-7 rounded-xl font-bold shadow-glow" asChild>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
+            <Button variant="outline" size="lg" className="text-base px-9 py-7 rounded-xl font-bold" asChild>
               <Link to="/app">
-                Começar grátis agora
+                Ver como funciona
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <p className="text-sm text-muted-foreground">
-              7 dias grátis • Sem cartão • Leva 2 minutos
-            </p>
+            <Button variant="gradient" size="lg" className="text-base px-9 py-7 rounded-xl font-bold shadow-glow" asChild>
+              <Link to="/app">
+                Testar demonstracao
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </motion.div>
 

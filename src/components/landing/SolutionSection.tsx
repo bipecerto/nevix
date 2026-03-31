@@ -12,19 +12,18 @@ export function SolutionSection() {
           className="max-w-3xl mx-auto text-center space-y-6"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold">
-            A solução para <span className="gradient-text">não perder mais clientes</span>
+            Uma agente que trabalha enquanto voce foca no que importa
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            O Nevix organiza seu atendimento diretamente no WhatsApp Web, sem complicação.
-            Sem trocar de plataforma, sem instalação complexa.
+            O Nevix assume o atendimento do seu negocio, respondendo mensagens, entendendo o cliente e conduzindo cada conversa de forma automatica.
           </p>
 
           <div className="flex flex-col gap-4 items-start text-left max-w-md mx-auto pt-4">
             {[
-              "Funciona direto no WhatsApp Web",
-              "Painel lateral com tudo que você precisa",
-              "IA integrada para respostas inteligentes",
-              "Ative em 2 minutos, sem complicação",
+              "Responde clientes em tempo real",
+              "Conduz conversas automaticamente",
+              "Organiza contatos sem esforco",
+              "Mantem padrao no atendimento",
             ].map((item, i) => (
               <motion.div
                 key={i}

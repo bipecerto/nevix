@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Zap, Bell, LayoutGrid, TrendingUp } from "lucide-react";
+import { Gauge, ShieldCheck, LayoutGrid, TrendingUp, SlidersHorizontal } from "lucide-react";
 
 const benefits = [
-  { icon: Zap, title: "Responda em segundos", desc: "Templates e IA para atender clientes instantaneamente" },
-  { icon: Bell, title: "Nunca esqueça follow-up", desc: "Lembretes automáticos para cada oportunidade" },
-  { icon: LayoutGrid, title: "Controle total das conversas", desc: "Etiquetas, notas e filtros para nunca perder o fio" },
-  { icon: TrendingUp, title: "Mais clientes fechados", desc: "Atendimento profissional que converte mais leads" },
+  { icon: ShieldCheck, title: "Menos trabalho manual", desc: "O sistema responde por voce." },
+  { icon: Gauge, title: "Mais velocidade", desc: "Clientes recebem resposta na hora." },
+  { icon: LayoutGrid, title: "Mais organizacao", desc: "Tudo estruturado automaticamente." },
+  { icon: TrendingUp, title: "Mais escala", desc: "Atenda muito mais pessoas ao mesmo tempo." },
+  { icon: SlidersHorizontal, title: "Mais consistencia", desc: "Mesmo padrao em todas as conversas." },
 ];
 
 export function BenefitsSection() {
@@ -19,7 +20,7 @@ export function BenefitsSection() {
           className="text-center space-y-4 mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold">
-            Resultados <span className="gradient-text">reais</span>
+            Atendimento mais rapido, organizado e escalavel
           </h2>
         </motion.div>
 
