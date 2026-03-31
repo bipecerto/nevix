@@ -46,11 +46,11 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarContent className="flex flex-col h-full">
         {/* Logo */}
-        <div className={`p-4 flex items-center gap-2 ${collapsed ? "justify-center" : ""}`}>
-          <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center flex-shrink-0">
+        <div className={`p-5 flex items-center gap-3 ${collapsed ? "justify-center" : ""}`}>
+          <div className="w-8 h-8 rounded-xl gradient-bg flex items-center justify-center flex-shrink-0 shadow-sm">
             <Sparkles className="h-4 w-4 text-primary-foreground" />
           </div>
-          {!collapsed && <span className="font-display font-extrabold text-lg">Nevix</span>}
+          {!collapsed && <span className="font-display font-extrabold text-[20px] tracking-tight">Nevix</span>}
         </div>
 
         {/* Nav */}
@@ -63,11 +63,11 @@ export function AppSidebar() {
                     <NavLink
                       to={item.url}
                       end={item.url === "/app"}
-                      className="hover:bg-accent/50"
-                      activeClassName="bg-accent text-accent-foreground font-medium"
+                      className="text-muted-foreground font-medium hover:bg-muted/40 transition-colors flex items-center gap-3 px-3 py-2.5 rounded-xl group relative"
+                      activeClassName="bg-primary/10 text-primary font-bold shadow-sm before:absolute before:left-[-6px] before:top-1/2 before:-translate-y-1/2 before:w-[3px] before:h-4 before:bg-primary before:rounded-r-full"
                     >
-                      <item.icon className="mr-2 h-4 w-4" />
-                      {!collapsed && <span>{item.title}</span>}
+                      <item.icon className="h-[18px] w-[18px] transition-transform group-hover:scale-110" />
+                      {!collapsed && <span className="text-[13px]">{item.title}</span>}
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -78,19 +78,23 @@ export function AppSidebar() {
 
         {/* Footer - Plan */}
         {!collapsed && (
-          <div className="p-4 border-t border-border space-y-3">
+          <div className="p-4 border-t border-border/40 space-y-3.5 bg-muted/10">
             <div className="flex items-center justify-between">
-              <div>
-                <p className="text-xs text-muted-foreground">Plano atual</p>
-                <p className="text-sm font-semibold font-display">Gratuito</p>
+              <div className="flex items-center gap-2.5">
+                <div className="p-1.5 rounded-lg bg-primary/10 text-primary">
+                   <Crown className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="text-[10px] text-muted-foreground uppercase tracking-wider font-semibold">Plano atual</p>
+                  <p className="text-[13px] font-bold text-foreground leading-tight">Gratuito</p>
+                </div>
               </div>
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-muted text-muted-foreground font-medium">
-                Trial 7 dias
+              <span className="text-[10px] px-2 py-0.5 rounded-md bg-emerald-500/10 text-emerald-600 font-bold border border-emerald-500/20">
+                Trial
               </span>
             </div>
-            <Button variant="gradient" size="sm" className="w-full rounded-xl text-xs">
-              <Crown className="h-3.5 w-3.5 mr-1" />
-              Upgrade para Premium
+            <Button variant="gradient" className="w-full rounded-xl text-[13px] h-9 font-bold shadow-md hover:shadow-lg transition-transform hover:scale-[1.02]">
+              Assinar Premium
             </Button>
           </div>
         )}

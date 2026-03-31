@@ -5,14 +5,14 @@ import { Plus, Clock, Check, AlertCircle, Calendar } from "lucide-react";
 const filters = ["Todos", "Hoje", "Amanhã", "Atrasados", "Concluídos"];
 
 const reminders = [
-  { id: 1, client: "Maria Silva", note: "Enviar proposta comercial", date: "Hoje, 14:00", status: "pendente", overdue: false },
-  { id: 2, client: "João Oliveira", note: "Follow-up sobre orçamento", date: "Hoje, 15:30", status: "pendente", overdue: false },
-  { id: 3, client: "Ana Costa", note: "Confirmar agendamento", date: "Amanhã, 10:00", status: "pendente", overdue: false },
-  { id: 4, client: "Lucas Mendes", note: "Enviar catálogo de produtos", date: "Amanhã, 09:00", status: "pendente", overdue: false },
-  { id: 5, client: "Pedro Santos", note: "Resolver ticket de suporte", date: "Ontem, 16:00", status: "atrasado", overdue: true },
-  { id: 6, client: "Fernanda Rocha", note: "Retornar ligação", date: "25/03, 11:00", status: "atrasado", overdue: true },
-  { id: 7, client: "Carla Lima", note: "Enviar link de pagamento", date: "25/03", status: "concluído", overdue: false },
-  { id: 8, client: "Rafael Souza", note: "Confirmar entrega", date: "24/03", status: "concluído", overdue: false },
+  { id: 1, client: "Fernanda Rocha", note: "Retornar ligação sobre a proposta", date: "Ontem", status: "atrasado", overdue: true },
+  { id: 2, client: "Maria Silva", note: "Enviar proposta comercial atualizada", date: "Hoje, 14:00", status: "pendente", overdue: false },
+  { id: 3, client: "João Oliveira", note: "Retornar ligação sobre fechamento", date: "Hoje, 15:30", status: "pendente", overdue: false },
+  { id: 4, client: "Ana Costa", note: "Enviar link da reunião no Zoom", date: "Hoje, 16:00", status: "pendente", overdue: false },
+  { id: 5, client: "Lucas Mendes", note: "Cobrar preenchimento do briefing", date: "Amanhã, 09:00", status: "pendente", overdue: false },
+  { id: 6, client: "Pedro Santos", note: "Resolver chamado pendente", date: "Amanhã, 11:30", status: "pendente", overdue: false },
+  { id: 7, client: "Carla Lima", note: "Agradecer feedback NPS recebido", date: "25/03", status: "concluído", overdue: false },
+  { id: 8, client: "Rafael Souza", note: "Confirmar recebimento do contrato", date: "24/03", status: "concluído", overdue: false },
 ];
 
 export default function RemindersPage() {
@@ -34,10 +34,10 @@ export default function RemindersPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="font-display text-2xl font-bold">Lembretes</h1>
-          <p className="text-muted-foreground">Seus follow-ups e tarefas pendentes</p>
+          <h1 className="font-display text-[26px] font-extrabold tracking-tight">Lembretes</h1>
+          <p className="text-muted-foreground text-[14px]">Sincronize follow-ups e tarefas para o seu dia a dia</p>
         </div>
-        <Button variant="gradient" className="rounded-xl">
+        <Button variant="gradient" className="rounded-xl shadow-sm hover:shadow-md transition-shadow font-bold h-10 px-4">
           <Plus className="h-4 w-4 mr-2" /> Novo lembrete
         </Button>
       </div>

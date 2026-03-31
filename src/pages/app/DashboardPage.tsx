@@ -2,55 +2,55 @@ import { MessageSquare, Clock, Users, Bell, TrendingUp, UserCheck, ArrowUpRight,
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 const stats = [
-  { label: "Atendimentos hoje", value: "47", icon: MessageSquare, change: "+12%", up: true },
-  { label: "Tempo médio de resposta", value: "2min", icon: Clock, change: "-18%", up: false },
-  { label: "Conversas abertas", value: "23", icon: Users, change: "+5%", up: true },
-  { label: "Follow-ups pendentes", value: "8", icon: Bell, change: "3 atrasados", up: false },
-  { label: "Taxa de conversão", value: "34%", icon: TrendingUp, change: "+7%", up: true },
-  { label: "Aguardando retorno", value: "12", icon: UserCheck, change: "", up: true },
+  { label: "Atendimentos Hoje", value: "142", icon: MessageSquare, change: "+12%", up: true },
+  { label: "Tempo Médio (TMA)", value: "3m 45s", icon: Clock, change: "-18% (Melhor)", up: true },
+  { label: "Chats Ativos", value: "28", icon: Users, change: "+5%", up: true },
+  { label: "Follow-ups Pendentes", value: "12", icon: Bell, change: "3 atrasados", up: false },
+  { label: "Taxa de Conversão", value: "18.4%", icon: TrendingUp, change: "+2.1%", up: true },
+  { label: "Aguardando Cliente", value: "45", icon: UserCheck, change: "Volume alto", up: true },
 ];
 
 const weekData = [
-  { day: "Seg", atendimentos: 32 },
-  { day: "Ter", atendimentos: 45 },
-  { day: "Qua", atendimentos: 38 },
-  { day: "Qui", atendimentos: 52 },
-  { day: "Sex", atendimentos: 47 },
-  { day: "Sáb", atendimentos: 18 },
-  { day: "Dom", atendimentos: 8 },
+  { day: "Seg", atendimentos: 112 },
+  { day: "Ter", atendimentos: 145 },
+  { day: "Qua", atendimentos: 138 },
+  { day: "Qui", atendimentos: 165 },
+  { day: "Sex", atendimentos: 142 },
+  { day: "Sáb", atendimentos: 45 },
+  { day: "Dom", atendimentos: 22 },
 ];
 
 const recentConversations = [
-  { name: "Maria Silva", msg: "Olá, gostaria de saber o preço...", time: "10:32", tag: "Lead" },
+  { name: "Maria Silva", msg: "Sim, por favor! Quais são as vantagens?", time: "10:32", tag: "Novo" },
   { name: "João Oliveira", msg: "Obrigado, vou pensar!", time: "09:45", tag: "Cliente" },
-  { name: "Ana Costa", msg: "Quando posso agendar?", time: "Ontem", tag: "Quente" },
-  { name: "Pedro Santos", msg: "Preciso de suporte", time: "Ontem", tag: "Suporte" },
+  { name: "Ana Costa", msg: "Quando posso agendar a demonstração?", time: "Ontem", tag: "Quente" },
+  { name: "Pedro Santos", msg: "Preciso de suporte técnico no painel", time: "Ontem", tag: "Bug" },
 ];
 
 const todayReminders = [
-  { client: "Maria Silva", note: "Enviar proposta comercial", time: "14:00" },
-  { client: "João Oliveira", note: "Follow-up sobre orçamento", time: "15:30" },
-  { client: "Carla Lima", note: "Enviar link de pagamento", time: "16:00" },
+  { client: "Maria Silva", note: "Enviar proposta comercial atualizada", time: "14:00" },
+  { client: "João Oliveira", note: "Retornar ligação sobre fechamento", time: "15:30" },
+  { client: "Ana Costa", note: "Enviar link da reunião no Zoom", time: "16:00" },
 ];
 
 const teamRanking = [
-  { name: "João Silva", atendimentos: 18, tempo: "1:42" },
-  { name: "Maria Santos", atendimentos: 15, tempo: "2:10" },
-  { name: "Pedro Costa", atendimentos: 14, tempo: "2:35" },
+  { name: "João Silva", atendimentos: 54, tempo: "2m 12s" },
+  { name: "Carla Dias", atendimentos: 48, tempo: "2m 45s" },
+  { name: "Marcos V.", atendimentos: 40, tempo: "3m 10s" },
 ];
 
 export default function DashboardPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="font-display text-2xl font-bold">Dashboard</h1>
-        <p className="text-muted-foreground">Visão geral do seu atendimento</p>
+        <h1 className="font-display text-[26px] font-extrabold tracking-tight">Visão Geral</h1>
+        <p className="text-muted-foreground text-[14px]">Acompanhe as métricas de atendimento em tempo real da sua operação.</p>
       </div>
 
       {/* Stats */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
         {stats.map((s, i) => (
-          <div key={i} className="p-5 rounded-2xl border border-border bg-card shadow-soft space-y-3">
+          <div key={i} className="p-5 rounded-2xl border border-border bg-card shadow-soft space-y-3 transition-all duration-200 hover:shadow-medium">
             <div className="flex items-center justify-between">
               <span className="text-xs text-muted-foreground">{s.label}</span>
               <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
@@ -58,9 +58,9 @@ export default function DashboardPage() {
               </div>
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="font-display text-2xl font-bold">{s.value}</span>
+              <span className="font-display text-[26px] font-extrabold">{s.value}</span>
               {s.change && (
-                <span className={`text-xs font-medium flex items-center gap-0.5 ${s.up ? "text-green-600" : "text-primary"}`}>
+                <span className={`text-[11px] font-bold px-1.5 py-0.5 rounded-md flex items-center gap-0.5 ${s.up ? "bg-emerald-500/10 text-emerald-600" : "bg-red-500/10 text-red-600"}`}>
                   {s.up ? <ArrowUpRight className="h-3 w-3" /> : <ArrowDownRight className="h-3 w-3" />}
                   {s.change}
                 </span>
@@ -72,7 +72,7 @@ export default function DashboardPage() {
 
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Chart */}
-        <div className="lg:col-span-2 p-6 rounded-2xl border border-border bg-card shadow-soft">
+        <div className="lg:col-span-2 p-6 rounded-2xl border border-border bg-card shadow-soft transition-all duration-200 hover:shadow-medium">
           <h2 className="font-display font-bold text-base mb-4">Atendimentos na semana</h2>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
@@ -100,7 +100,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Team ranking */}
-        <div className="p-6 rounded-2xl border border-border bg-card shadow-soft">
+        <div className="p-6 rounded-2xl border border-border bg-card shadow-soft transition-all duration-200 hover:shadow-medium">
           <h2 className="font-display font-bold text-base mb-4">Ranking de atendentes</h2>
           <div className="space-y-3">
             {teamRanking.map((t, i) => (
@@ -120,7 +120,7 @@ export default function DashboardPage() {
 
       <div className="grid lg:grid-cols-2 gap-6">
         {/* Recent conversations */}
-        <div className="p-6 rounded-2xl border border-border bg-card shadow-soft">
+        <div className="p-6 rounded-2xl border border-border bg-card shadow-soft transition-all duration-200 hover:shadow-medium">
           <h2 className="font-display font-bold text-base mb-4">Conversas recentes</h2>
           <div className="space-y-2">
             {recentConversations.map((c, i) => (
@@ -142,7 +142,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Today reminders */}
-        <div className="p-6 rounded-2xl border border-border bg-card shadow-soft">
+        <div className="p-6 rounded-2xl border border-border bg-card shadow-soft transition-all duration-200 hover:shadow-medium">
           <h2 className="font-display font-bold text-base mb-4">Lembretes de hoje</h2>
           <div className="space-y-2">
             {todayReminders.map((r, i) => (
